@@ -306,7 +306,8 @@ static int kasa_scan(lua_State *L)
     const char *bcast = luaL_checkstring(L, -3);
     uint32_t timeoutMs = luaL_checkint(L, -2);
     uint8_t is_query = lua_tonumber(L, -1) > 0 ? lua_tonumber(L, -1) : 0;
-
+    uint8_t idx = 1;
+	
     // invalid arguments .. bail
     if(!bcast || !timeoutMs ){
       printf("Scan2 Invalid Arguments !!\n");
@@ -426,7 +427,7 @@ static int kasa_scan(lua_State *L)
 
                     recvbuf[len] = 0;
                     {
-                            lua_pushstring(L, raddr_name);
+                            lua_pushinteger(L, idx++);
                             lua_newtable(L);
                             { 
                                 lua_pushstring(L, raddr_name);
