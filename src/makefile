@@ -4,7 +4,7 @@ DELETE = rm -rf
 OUT ?= -o $(PROG)
 LOUT ?= -o $(LPROG)
 SOURCES = kasalua.c
-CFLAGS = -W -Wall -Wextra -g -O2
+CFLAGS = -W -Wall -Wextra -O2
 LDFLAGS = -shared -fpic -llua -lm
 
 all: $(NAME)
