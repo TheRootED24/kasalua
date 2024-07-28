@@ -17,7 +17,8 @@ project(
 
 set(CMAKE_SHARED_LIBRARY_PREFIX "")
 add_library(kasa SHARED kasalua.c)
-
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -fpic")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -O3")
 target_link_libraries(kasa liblua.so)
 target_link_libraries(kasa m)
 install(TARGETS kasa DESTINATION /usr/lib/lua/kasa/)
