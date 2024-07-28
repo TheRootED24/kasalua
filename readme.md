@@ -1,3 +1,2 @@
-Kasa-Lua provides high level lua bindings the The Kasa interface library
-
-
+# kasa-lua
+Kasa-Lua provides high level lua binding to the Kasa interface library with minimal overhead
