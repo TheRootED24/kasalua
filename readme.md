@@ -44,3 +44,16 @@ resp = kasa:send(devs[1].ip, cmds.system_sysinfo)
 > print(resp)
 
 {"system":{"get_sysinfo":{"sw_ver":"1.0.8 Build 230804 Rel.172306","hw_ver":"2.0","model":"KP303(US)","deviceId":"0000000000000000000000000000000000000000","oemId":"00000000000000000000000000000000","hwId":"00000000000000000000000000000000","rssi":-53,"latitude_i":-1679051393,"longitude_i":-1679051393,"alias":"TP-LINK_Power Strip_0A7D","status":"new","obd_src":"tplink","mic_type":"IOT.SMARTPLUGSWITCH","feature":"TIM","mac":"00:00:00:00:00:00","updating":0,"led_off":0,"children":[{"id":"00","state":1,"alias":"EXHAUST FAN","on_time":26786,"next_action":{"type":1,"schd_sec":82800,"action":0}},{"id":"01","state":1,"alias":"Light1","on_time":33986,"next_action":{"type":1,"schd_sec":82800,"action":0}},{"id":"02","state":1,"alias":"HUMIDIFIER","on_time":26787,"next_action":{"type":1,"schd_sec":82800,"action":0}}],"child_num":3,"ntc_state":0,"err_code":0}}}
+```
+
+See kasa_commands.lua for a for list of available cmds.
+
+# Supported Models
+at this time kasalua supports the folling models
+
+PLUGS: HS103
+STRIPS: KP303, KP400
+BULBS: KL125
+
+However, it should be as simple as adding the new hw_id's for model to be added to the supported list. 
+Unfortuniatley these are the only model I had to test during development. If you have a plug, strip, wall plug, wall swicth, bulb, or light strip and woulkd like to have it added please request it and I 'll see if i can get it added. Enjoy!
