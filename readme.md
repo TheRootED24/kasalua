@@ -49,11 +49,7 @@ resp = kasa:send(devs[1].ip, cmds.system_sysinfo)
 See kasa_commands.lua for a for list of available cmds.
 
 # Supported Models
-at this time kasalua supports the folling models
-
-PLUGS: HS103
-STRIPS: KP303, KP400
-BULBS: KL125
-
-However, it should be as simple as adding the new hw_id's for model to be added to the supported list. 
-Unfortuniatley these are the only model I had to test during development. If you have a plug, strip, wall plug, wall swicth, bulb, or light strip and woulkd like to have it added please request it and I 'll see if i can get it added. Enjoy!
+all bulbs
+all light strips
+all plugs
+all strips
