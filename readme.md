@@ -49,7 +49,6 @@ resp = kasa:send(devs[1].ip, cmds.system_sysinfo)
 See kasa_commands.lua for a for list of available cmds.
 
 # Supported Models
-all bulbs
-all light strips
-all plugs
-all strips
+- all bulbs, plugs, strips, and light strips
+
+
